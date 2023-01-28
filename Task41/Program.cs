@@ -3,15 +3,19 @@
 // 0, 7, 8, -2, -2 -> 2
 // 1, -7, 567, 89, 223-> 4
 
-int n = 0;
-string a = String.Empty;
-do 
+int number;
+int count = 0;
+string? a;
+string stopWord = "stop";
+
+while (true)
 {
     a = Console.ReadLine();
-
-    if (  Int32.Parse(a) > 0)n++;
-} 
-while(a != "stop");
-
-Console.WriteLine(n);
-
+    if (a == stopWord)
+    {
+        break;
+    }
+    number = Convert.ToInt32(a);
+    if (number > 0) count++;
+}
+Console.WriteLine(count);
